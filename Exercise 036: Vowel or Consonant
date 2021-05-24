@@ -1,4 +1,4 @@
-# Loop to check user input for age
+# Loop to check user input for alphabet
 loop=1
 while loop==1:
     alphabet = input('Please type an alphabet:')
