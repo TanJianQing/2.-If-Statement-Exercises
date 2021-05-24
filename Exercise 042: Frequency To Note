@@ -1,4 +1,4 @@
-# Loop to check user input for octave and number
+# Loop to check user input for frequency
 loop=1
 while loop==1:
     try:
