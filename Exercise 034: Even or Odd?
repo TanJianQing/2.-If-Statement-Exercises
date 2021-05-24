@@ -1,0 +1,14 @@
+# Loop to check user input for integer
+loop=1
+while loop==1:
+    try:
+        integer = int(input('Please type the number to check:'))
+        loop=0
+    except ValueError:
+        print('Please type in a proper integer!')
+
+# Check if integer is even or odd
+if integer % 2 != 0:
+    print('The integer is odd.')
+else:
+    print('The integer is even.')
