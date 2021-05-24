@@ -1,0 +1,46 @@
+# Loop to check user input for position
+loop=1
+while loop==1:
+    position = input('Please type the position to check:')
+    if len(position)!=2:
+        print('Error! Please check if the position is typed correctly.')
+    else:
+        # Checking letter of position
+        letter = position[0]
+        if letter.lower() not in ('a','b','c','d','e','f','g','h'):
+            print('Please enter a proper letter (A-H for your position!')
+        else:
+            pass
+
+        # Checking number of position
+        try:
+            number = int(position[1])
+            if number not in range(1,9):
+                print('Please enter a proper number (1-8) for your position!')
+            else:
+                pass
+        except ValueError:
+            print('Please enter a proper number (1-8) for your position!')
+
+        # Passing conditions
+        if letter.lower() in ('a','b','c','d','e','f','g','h') and number in range(1,9):
+            loop=0
+        else:
+            pass
+
+# Assigning black and white attributes to letter and number
+if letter in ('a','c','e','g'):
+    letter_attribute = 1
+else:
+    letter_attribute = 0
+
+if number in (1,3,5,7):
+    number_attribute = 1
+else:
+    number_attribute = 0
+
+# Predicting whether position is black or white
+if (letter_attribute,number_attribute)==(1,1) or (letter_attribute,number_attribute)==(0,0):
+    print('The square is black.')
+else:
+    print('The square is white')
