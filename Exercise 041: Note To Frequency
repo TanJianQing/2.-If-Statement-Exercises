@@ -1,0 +1,51 @@
+# Loop to check user input for octave and number
+loop=1
+while loop==1:
+    note = input('Please type the note to check:')
+    if len(note)!=2:
+        print('Error! Please check if the note is typed correctly.')
+    else:
+        # Checking octave of note
+        octave = note[0]
+        if octave.lower() not in ('c','d','e','f','g','a','b'):
+            print('Please enter a proper octave (C-B) for your note!!')
+        else:
+            pass
+
+        # Checking number of note
+        try:
+            number = int(note[1])
+            if number not in range(0,9):
+                print('Please enter a proper number (0-8) for your note!')
+            else:
+                pass
+        except ValueError:
+            print('Please enter a proper number (0-8) for your note!')
+
+        # Passing conditions
+        if octave.lower() in ('c','d','e','f','g','a','b') and number in range(0,9):
+            loop=0
+        else:
+            pass
+
+# Defining frequency_4 for calculation based on octave
+if octave.lower()=='c':
+    frequency_4 = 261.63
+elif octave.lower()=='d':
+    frequency_4 = 293.66
+elif octave.lower() == 'e':
+    frequency_4 = 329.63
+elif octave.lower() == 'f':
+    frequency_4 = 349.23
+elif octave.lower() == 'g':
+    frequency_4 = 392.00
+elif octave.lower() == 'a':
+    frequency_4 = 440.00
+else:
+    frequency_4 = 493.88
+
+# Calculating resultant frequency based on note
+resultant_frequency = frequency_4 / (2 ** (4 - number))
+
+# Printing resultant frequency
+print(f'Frequency of {note}: {resultant_frequency}Hz')
