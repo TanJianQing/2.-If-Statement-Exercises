@@ -1,0 +1,17 @@
+# Loop to check user input for age
+loop=1
+while loop==1:
+    alphabet = input('Please type an alphabet:')
+    if alphabet.lower() not in ('a','b','c','d','e','f','g','h','i','j','k','l','m',\
+                                'n','o','p','q','r','s','t','u','v','w','x','y','z'):
+        print('Please only type an alphabet!')
+    else:
+        loop=0
+
+# Check if alphabet is a vowel or consonant
+if alphabet.lower()=='y':
+    print(f'{alphabet.upper()} is sometimes a vowel and sometimes a consonant.')
+elif alphabet.lower() in ('a','e','i','o','u'):
+    print(f'{alphabet.upper()} is a vowel.')
+else:
+    print(f'{alphabet.upper()} is a consonant.')
