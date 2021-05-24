@@ -1,0 +1,35 @@
+# Loop to check user input for number of sides
+loop=1
+while loop==1:
+    month = input('Please type the name of the month:')
+    if month.lower() not in ('january','february','march','april','may','june',\
+                             'july','august','september','october','november','december'):
+        print('Error! Please check if you spelt the month correctly.')
+    else:
+        loop=0
+
+# Print out results based on the month
+if month.lower()=='january':
+    print('30 days.')
+elif month.lower()=='february':
+    print('28 or 29 days.')
+elif month.lower()=='march':
+    print('31 days.')
+elif month.lower()=='april':
+    print('30 days.')
+elif month.lower()=='may':
+    print('31 days.')
+elif month.lower()=='june':
+    print('30 days.')
+elif month.lower()=='july':
+    print('31 days.')
+elif month.lower()=='august':
+    print('31 days.')
+elif month.lower()=='september':
+    print('30 days.')
+elif month.lower()=='october':
+    print('31 days.')
+elif month.lower()=='november':
+    print('30 days.')
+else:
+    print('31 days.')
