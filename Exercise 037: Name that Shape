@@ -1,0 +1,29 @@
+# Loop to check user input for number of sides
+loop=1
+while loop==1:
+    try:
+        sides = int(input('Please type the number of sides:'))
+        if sides not in range(3,11):
+            print('The number of sides must be between 3-10 inclusive!')
+        else:
+            loop=0
+    except ValueError:
+        print('Please only type an integer!')
+
+# Print out results based on number of sides
+if sides==3:
+    print('This is a triangle.')
+elif sides==4:
+    print('This is a parallelogram.')
+elif sides==5:
+    print('This is a pentagon.')
+elif sides==6:
+    print('This is a hexagon.')
+elif sides==7:
+    print('This is a heptagon.')
+elif sides==8:
+    print('This is a octagon.')
+elif sides==9:
+    print('This is a nonagon.')
+else:
+    print('This is a decagon.')
