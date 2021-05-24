@@ -1,0 +1,29 @@
+# Loop to check user input for octave and number
+loop=1
+while loop==1:
+    try:
+        frequency = float(input('Please type the frequency to check(Hz):'))
+        if frequency<0:
+            print('Frequency cannot be negative!')
+        else:
+            loop=0
+    except ValueError:
+        print('Please type a proper number!')
+
+# Printing notes based on frequency
+if 260.63 < frequency < 262.64:
+    print('This is C4.')
+elif 292.66 < frequency < 294.67:
+    print('This is D4.')
+elif 328.63 < frequency < 330.64:
+    print('This is E4.')
+elif 348.23 < frequency < 350.24:
+    print('This is F4.')
+elif 391.00 < frequency < 393.01:
+    print('This is G4.')
+elif 439.00 < frequency < 441.00:
+    print('This is A4.')
+elif 492.88 < frequency < 494.88:
+    print('This is B4.')
+else:
+    print('Unknown frequency.')
