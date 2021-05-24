@@ -1,0 +1,35 @@
+# Loop to check user input for month and date
+loop=1
+while loop==1:
+    try:
+        # Checks the month input
+        month = int(input('Please type the month:'))
+        if month not in range(1,13):
+            print('Month must be between 1-12!')
+        else:
+            pass
+
+        # Checks the date input
+        day = int(input('Please type the day:'))
+        if day not in range(1,32):
+            print('Month must be between 1-31!')
+        else:
+            pass
+
+        if month in range(1,13) and day in range(1,32):
+            loop=0
+        else:
+            pass
+
+    except ValueError:
+        print('Please type a proper integer!')
+
+# Printing holiday based on month and day
+if month == 1 and day == 1:
+    print("New year's day")
+elif month == 7 and day == 1:
+    print('Canada day')
+elif month == 12 and day == 25:
+    print('Christmas day')
+else:
+    print('Day and month does not correspond to any holiday.')
