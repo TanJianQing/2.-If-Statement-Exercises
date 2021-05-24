@@ -1,0 +1,29 @@
+# Loop to check user input for monetary value
+loop=1
+while loop==1:
+    try:
+        money = int(input('Please type the amount($):'))
+        if money<0:
+            print('Monetary value cannot be negative!')
+        else:
+            loop=0
+    except ValueError:
+        print('Please type a proper integer!')
+
+# Printing notes based on monetary value
+if money == 1:
+    print('George Washington.')
+elif money == 2:
+    print('Thomas Jefferson.')
+elif money == 5:
+    print('Abraham Lincoln.')
+elif money == 10:
+    print('Alexander Hamilton.')
+elif money == 20:
+    print('Andrew Jackson.')
+elif money == 50:
+    print('Ulysses S. Grant.')
+elif money == 100:
+    print('Benjamin Franklin.')
+else:
+    print('No such note exist!.')
