@@ -1,0 +1,21 @@
+# Loop to check user input for length of sides
+loop=1
+while loop==1:
+    try:
+        length1 = float(input('Please type the length of the 1st side:'))
+        length2 = float(input('Please type the length of the 2nd side:'))
+        length3 = float(input('Please type the length of the 3rd side:'))
+        if length1<0 or length2<0 or length3<0:
+            print('The length cannot be less than 0!')
+        else:
+            loop=0
+    except ValueError:
+        print('Please type a proper number!')
+
+# Print out results based on lengths given
+if length1 == length2 ==length3:
+    print('The triangle is an equilateral triangle.')
+elif length1 == length2 or length2 == length3 or length3 == length1:
+    print('The triangle is an isosceles triangle.')
+else:
+    print('The triangle is a scalene triangle.')
