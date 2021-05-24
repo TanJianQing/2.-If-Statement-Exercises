@@ -1,0 +1,20 @@
+# Loop to check user input for age
+loop=1
+while loop==1:
+    try:
+        age = int(input('Please type the age of the dog in human years:'))
+        if age<0:
+            print('You cannot have negative age!')
+        else:
+            loop=0
+    except ValueError:
+        print('Please type in a proper integer!')
+
+# Check if age is more than 2
+if age>2:
+    age_dog = 21 + (age - 2) * 4
+else:
+    age_dog = age * 10.5
+
+# Print out the age of the dog in dog years
+print(f'Age of dog in dog years:{age_dog}')
