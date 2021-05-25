@@ -1,0 +1,35 @@
+# import necessary modules
+from math import sqrt
+
+# Loop to check user input for a,b, and c
+loop=1
+while loop==1:
+    try:
+        a = float(input('Please type the value of a:'))
+        b = float(input('Please type the value of b:'))
+        c = float(input('Please type the value of c:'))
+        loop=0
+    except ValueError:
+        print('Please enter a proper value!')
+
+# Checking for number of roots
+root_checker = b ** 2 - (4 * a * c)
+if root_checker < 0:
+    print('There are no real root!')
+elif root_checker == 0:
+    print('There is only 1 real root!')
+else:
+    print('There are 2 real roots!')
+
+# Calculating real roots
+if root_checker <0:
+    pass
+else:
+    root_1 = (-b + sqrt(root_checker)) / (2 * a)
+    print(root_1)
+
+    if root_checker == 0:
+        pass
+    else:
+        root_2 = (-b - sqrt(root_checker)) / (2 * a)
+        print(root_2)
