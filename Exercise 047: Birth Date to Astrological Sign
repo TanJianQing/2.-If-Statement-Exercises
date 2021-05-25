@@ -26,7 +26,7 @@ while loop==1:
     else:
         pass
 
-# defining conditions for the zodiac signs
+# defining conditions for the astrological signs
 if month.lower() == 'december' and date in range(22,32) or month.lower() == 'january' and date in range(1,20):
     print('Capricorn')
 elif month.lower() == 'january' and date in range(20,32) or month.lower() == 'february' and date in range(1,19):
