@@ -1,0 +1,9 @@
+plate = input('Please type the license plate:')
+
+# Conditions for license plate validity
+if len(plate)==6 and plate[0:2].isupper() is True and plate[3:5].isnumeric() is True:
+    print('The characters are valid for an older style license plate.')
+elif len(plate)==7 and plate[0:3].isnumeric() is True and plate[4:6].isupper() is True:
+    print('The characters are valid for a newer style license plate.')
+else:
+    print('The characters are invalid for either style license plate.')
