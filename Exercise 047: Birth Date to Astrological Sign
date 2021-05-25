@@ -1,0 +1,53 @@
+# Loop to check user input for month and date
+loop=1
+while loop==1:
+    try:
+        # Checking month input
+        month = input('Please type the month:')
+        if month.lower() not in ('january', 'february', 'march', 'april', 'may', 'june', \
+                                 'july', 'august', 'september', 'october', 'november', 'december'):
+            print('Please enter a proper month!')
+        else:
+            pass
+
+        # Checking date input
+        date = int(input('Please type the date:'))
+        if date not in range(1,32):
+            print('Please enter a proper date!!')
+        else:
+            pass
+    except ValueError:
+        print('Please enter a proper date!')
+
+    # Passing conditions
+    if month.lower() in ('january','february','march','april','may','june',\
+                            'july','august','september','october','november','december') and date in range(1,32):
+        loop=0
+    else:
+        pass
+
+# defining conditions for the zodiac signs
+if month.lower() == 'december' and date in range(22,32) or month.lower() == 'january' and date in range(1,20):
+    print('Capricorn')
+elif month.lower() == 'january' and date in range(20,32) or month.lower() == 'february' and date in range(1,19):
+    print('Aquarius')
+elif month.lower() == 'february' and date in range(19,32) or month.lower() == 'march' and date in range(1,21):
+    print('Pisces')
+elif month.lower() == 'march' and date in range(21,32) or month.lower() == 'april' and date in range(1,20):
+    print('Aries')
+elif month.lower() == 'april' and date in range(20,32) or month.lower() == 'may' and date in range(1,21):
+    print('Taurus')
+elif month.lower() == 'may' and date in range(21,32) or month.lower() == 'june' and date in range(1,21):
+    print('Gemini')
+elif month.lower() == 'june' and date in range(21,32) or month.lower() == 'july' and date in range(1,23):
+    print('Cancer')
+elif month.lower() == 'july' and date in range(23,32) or month.lower() == 'august' and date in range(1,23):
+    print('Leo')
+elif month.lower() == 'august' and date in range(23,32) or month.lower() == 'september' and date in range(1,23):
+    print('Virgo')
+elif month.lower() == 'september' and date in range(23,32) or month.lower() == 'october' and date in range(1,23):
+    print('Libra')
+elif month.lower() == 'october' and date in range(21,32) or month.lower() == 'november' and date in range(1,22):
+    print('Scorpio')
+else:
+    print('Sagittarius')
