@@ -1,0 +1,35 @@
+# Loop to check user input for call time and number of text messages
+loop = 1
+while loop == 1:
+    try:
+        call_time = int(input('Please type the call time incurred(min):'))
+        text_msg = int(input('Please type the number of text messages sent:'))
+        loop = 0
+    except ValueError:
+        print('Please only type a number!')
+
+# Base charge and 911 fee
+base_fee = 15.00
+fee_911 = 0.44
+
+print('Base fee: ${:.2f}'.format(base_fee))
+print('911 charge:  ${:.2f}'.format(fee_911))
+
+# Additional minutes charges and additional text message charge
+if call_time>50:
+    charge_call_time_extra = (call_time - 50) * 0.25
+    print(f'Additional minutes charges: ${charge_call_time_extra}')
+else:
+    charge_call_time_extra = 0
+
+if text_msg>50:
+    charge_text_msg_extra = (text_msg - 50) * 0.15
+    print(f'Additional text message charges: ${charge_text_msg_extra}')
+else:
+    charge_text_msg_extra = 0
+
+# Tax and total bill
+total_charge = base_fee + fee_911 + charge_text_msg_extra + charge_call_time_extra
+tax = total_charge * 0.05
+print('Tax: ${:.2f}'.format(tax))
+print('Total bill: ${:.2f}'.format(total_charge + tax))
