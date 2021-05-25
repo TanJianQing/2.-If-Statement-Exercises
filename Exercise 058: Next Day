@@ -22,8 +22,6 @@ days_30 = (4, 6, 9, 11)
 # Loop to check user input for year, month, and day
 loop = 1
 while loop == 1:
-    # checker used to ensure both month and date inputs are valid
-    checker = 0
     try:
         year = int(input('Please type the year:'))
         leap_year_checker()
