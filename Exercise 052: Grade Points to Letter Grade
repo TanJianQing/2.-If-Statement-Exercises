@@ -1,0 +1,35 @@
+# Loop to check user input for grade point
+loop=1
+while loop==1:
+    try:
+        grade = float(input('Please type the grade point:'))
+        if not 0 <= grade <= 4:
+            print('Error! Grade point is between 0.0-4.0!')
+        else:
+            loop=0
+    except ValueError:
+        print('Please only type a number!')
+
+# Printing results
+if grade == 4.0:
+    print('Grade: A+')
+elif 3.7 <= grade < 4:
+    print('Grade: A-')
+elif 3.3 <= grade < 3.7:
+    print('Grade: B+')
+elif 3.0 <= grade < 3.3:
+    print('Grade: B')
+elif 2.7 <= grade < 3.0:
+    print('Grade: B-')
+elif 2.3 <= grade < 2.7:
+    print('Grade: C+')
+elif 2.0 <= grade < 2.3:
+    print('Grade: C')
+elif 1.7 <= grade < 2.0:
+    print('Grade: C-')
+elif 1.3 <= grade < 1.7:
+    print('Grade: D+')
+elif 1.0 <= grade < 1.3:
+    print('Grade: D')
+else:
+    print('Grade: F')
