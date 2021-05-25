@@ -1,0 +1,25 @@
+# Loop to check user input for wavelength
+loop = 1
+while loop == 1:
+    try:
+        wavelength = float(input('Please type the wavelength(nm):'))
+        if wavelength > 750 or wavelength < 380:
+            print('This wavelength is outside the visible spectrum!')
+        else:
+            loop = 0
+    except ValueError:
+        print('Please only type a number!')
+
+# Printing colour
+if 380 <= wavelength < 450:
+    print('Violet.')
+elif 450 <= wavelength < 495:
+    print('Blue.')
+elif 495 <= wavelength < 570:
+    print('Green.')
+elif 570 <= wavelength < 590:
+    print('Yellow.')
+elif 590 <= wavelength < 620:
+    print('Orange.')
+else:
+    print('Red.')
