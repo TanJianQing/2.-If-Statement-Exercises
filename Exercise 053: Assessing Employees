@@ -1,0 +1,23 @@
+# Loop to check user input for rating
+loop = 1
+while loop == 1:
+    try:
+        rating = float(input('Please type the rating:'))
+        if rating not in (0.0,0.4) and rating < 0.6:
+            print('Error! Only possible ratings are 0.0, 0.4, or >=0.6!')
+        else:
+            loop = 0
+    except ValueError:
+        print('Please only type a number!')
+
+# Printing rating
+if rating == 0.0:
+    print('Unacceptable performance')
+elif rating == 0.4:
+    print('Acceptable performance')
+else:
+    print('Meritorious performance')
+
+# Printing raise
+raise_amount = rating * 2400.00
+print('Amount of raise: ${:.2f}'.format(raise_amount))
